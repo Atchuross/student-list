@@ -5,7 +5,7 @@ LABEL maintainer="CLAUZEL Clément"
 
 WORKDIR /
 
-COPY ./home/vagrant/student-list/simple_api/requirements.txt .
+COPY /home/vagrant/student-list/simple_api/requirements.txt .
 RUN apt update -y && apt install python-dev python3-dev libsasl2-dev python-dev libldap2-dev libssl-dev -y
 RUN pip3 install -r /requirements.txt
 
