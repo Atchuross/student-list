@@ -21,3 +21,11 @@ CMD [ "python3", "./student_age.py" ]
 
 #docker build -t simple_api .
 #docker run --name simple_api -d -p 5000:5000 -v /home/vagrant/data:/data simple_api
+
+#curl -u toto:python -X GET http://192.168.56.102:5000/pozos/api/v1.0/get_student_ages
+#{
+#  "student_ages": {
+#    "alice": "12",
+#    "bob": "13"
+#  }
+#}
