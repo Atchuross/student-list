@@ -20,4 +20,4 @@ CMD [ "python3", "./student_age.py" ]
 
 
 #docker build -t simple_api .
-#docker run -d -p 5000:5000 -v /home/vagrant/data:/data simple_api
+#docker run --name simple_api -d -p 5000:5000 -v /home/vagrant/data:/data simple_api
