@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  api:
+    image: simple_api
+    volumes:
+      - /home/vagrant/data:/data
+    ports:
+      - "8882:5000"
+    networks:
+      - student_list.network
+
+  website:
+    image: php:apache
+    environment:
+      USERNAME: "USERNAME"
+      PASSWORD: "PASSWORD"
+    volumes:
+      - ./website:/var/www/html
+    depends_on:
+      - api
+    ports:
+      - "8883:80"
+    networks:
+      - student_list.network
+
+networks:
+  student_list.network:
